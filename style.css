@@ -1,0 +1,82 @@
+body{
+    background-color: #333;
+}
+.social{
+    width: 400px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.icon{
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 2px 5px 4px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.icon::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: -100px;
+    right: -80px;
+}
+.facebook{
+    color: #1b4edf;
+}
+.instagram{
+    color: #b3417f;
+}
+.twitter{
+    color: #55acee;
+}
+.telegram{
+    color: #2fa3d9;
+}
+
+
+.facebook::before{
+    background-color: #1b4edf;
+}
+.instagram::before{
+    background-color: #b3417f;
+}
+.twitter::before{
+    background-color: #55acee;
+}
+.telegram::before{
+    background-color: #2fa3d9;
+}
+
+.icon:hover::before{
+    animation: MoveToBottom 1s forwards;
+}
+.icon .fa{
+    line-height: 70px;
+    font-size: 40px;
+    transition: all 0.5s;
+}
+.icon:hover .fa{
+    color: #fff;
+    transform: scale(1.1);
+}
+@keyframes MoveToBottom{
+    0%{
+        top: -100px;
+        right: -80px;
+    }
+    70%{
+        top: 20px;
+        right: 20px;
+    }
+    100%{
+        top: 0;
+        right: 0;
+    }
+}
